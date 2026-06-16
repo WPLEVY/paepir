@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAEPIR — Paintings by Marie Plevy</title>
-<meta name="description" content="Original acrylic paintings by Marie Plevy — contemporary Judaica, California scenes, Hebrew letterform abstractions. Available through PAEPIR studio.">
+<title>PAEPIR · Paintings by Marie Plevy</title>
+<meta name="description" content="Original acrylic paintings by Marie Plevy. Contemporary Judaica, California scenes, Hebrew letterform abstractions. Available through PAEPIR studio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Archivo:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
@@ -24,12 +24,17 @@ a{color:inherit}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,4vw,56px);transition:background .3s,box-shadow .3s}
 nav.scrolled{background:rgba(250,248,243,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
-.nav-name{font-family:var(--display);font-size:20px;font-weight:500;letter-spacing:.02em;text-decoration:none}
+.nav-name{font-family:var(--display);font-size:20px;font-weight:500;letter-spacing:.02em;text-decoration:none;color:#FAF8F3;background:rgba(20,17,12,.55);backdrop-filter:blur(4px);padding:6px 14px;border-radius:99px;transition:background .3s,color .3s}
+nav.scrolled .nav-name{background:transparent;color:var(--ink);padding:6px 0}
 .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-.nav-links a{text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.75;transition:opacity .2s}
+.nav-links a{text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#FAF8F3;opacity:.9;transition:opacity .2s,color .3s;text-shadow:0 1px 6px rgba(0,0,0,.4)}
 .nav-links a:hover,.nav-links a:focus-visible{opacity:1}
-.nav-links a.cta{border:1px solid var(--ink);padding:8px 18px;border-radius:99px;opacity:1}
-.nav-links a.cta:hover{background:var(--ink);color:var(--gesso)}
+.nav-links a.cta{border:1px solid #FAF8F3;padding:8px 18px;border-radius:99px;opacity:1}
+.nav-links a.cta:hover{background:#FAF8F3;color:var(--ink)}
+nav.scrolled .nav-links a{color:var(--ink);opacity:.75;text-shadow:none}
+nav.scrolled .nav-links a:hover,nav.scrolled .nav-links a:focus-visible{opacity:1}
+nav.scrolled .nav-links a.cta{border-color:var(--ink)}
+nav.scrolled .nav-links a.cta:hover{background:var(--ink);color:var(--gesso)}
 @media(max-width:720px){.nav-links li:not(:last-child){display:none}}
 
 header{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;background:#0d1b33}
@@ -40,7 +45,6 @@ header{position:relative;min-height:92vh;display:flex;align-items:flex-end;overf
 h1{font-family:var(--display);font-weight:300;font-size:clamp(46px,9vw,118px);line-height:.98;color:#FAF8F3;letter-spacing:-.01em}
 h1 em{font-style:italic;font-weight:400}
 .hero-sub{color:rgba(250,248,243,.85);max-width:600px;margin-top:22px;font-size:clamp(15px,1.4vw,18px)}
-.hero-name{position:absolute;top:clamp(18px,4vh,42px);left:clamp(20px,4vw,56px);z-index:2;color:#fff;font-family:"Fraunces",serif;font-size:clamp(22px,3vw,38px);font-weight:400;letter-spacing:.04em;text-shadow:0 1px 8px rgba(0,0,0,.55)}
 .hero-credit{position:absolute;right:clamp(20px,4vw,56px);bottom:18px;z-index:2;color:rgba(250,248,243,.55);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
 .scroll-hint{position:relative;display:inline-flex;align-items:center;gap:10px;margin-top:34px;color:#FAF8F3;text-decoration:none;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid rgba(250,248,243,.4);padding-bottom:6px}
 .scroll-hint:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
@@ -135,13 +139,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 </nav>
 
 <header id="top">
-  <img class="hero-img" src="img/img_1417.jpg" alt="The Crossing — a Torah scroll unrolling into the parted Red Sea, acrylic painting by Marie Plevy">
+  <img class="hero-img" src="img/img_1417.jpg" alt="The Crossing, a Torah scroll unrolling into the parted Red Sea, acrylic painting by Marie Plevy">
   <div class="hero-shade"></div>
-  <div class="hero-name">Marie Plevy</div>
   <div class="hero-content">
     <p class="hero-eyebrow">PAEPIR Studio</p>
     <h1>Old stories,<br><em>new light.</em></h1>
-    <p class="hero-sub">Paintings at the meeting point of Jewish memory and California light — Torah narratives set back in motion, Hebrew letters loosed as landscapes, cities caught mid-story.</p>
+    <p class="hero-sub">Paintings at the meeting point of Jewish memory and California light. Torah narratives set back in motion, Hebrew letters loosed as landscapes, cities caught mid-story.</p>
     <a class="scroll-hint" href="#work">View the work ↓</a>
   </div>
   <p class="hero-credit">The Crossing · acrylic on canvas · 36 × 48 in</p>
@@ -150,7 +153,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 <div class="statement">
   <div class="wrap">
     <span class="stamp">PAEPIR</span>
-    <p>The oldest stories never stopped moving — a sea mid-split, a letter mid-flame, a city mid-sentence. <em>I paint to catch them in motion.</em> Every original leaves my studio hand-stamped <strong>PAEPIR</strong>.</p>
+    <p>The oldest stories never stopped moving: a sea mid-split, a letter mid-flame, a city mid-sentence. <em>I paint to catch them in motion.</em> Every original leaves my studio hand-stamped <strong>PAEPIR</strong>.</p>
   </div>
 </div>
 
@@ -158,7 +161,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
   <div class="wrap">
     <div class="sec-head">
       <h2>The Work</h2>
-      <p class="sec-note">Thirty-four originals in acrylic on canvas and wood — from a pomegranate you could hold in one hand to a coastline seven feet wide. Dimensions are approximate; click any piece to inquire.</p>
+      <p class="sec-note">Thirty-four originals in acrylic on canvas and wood, from a pomegranate you could hold in one hand to a coastline seven feet wide. Dimensions are approximate; click any piece to inquire.</p>
     </div>
     <div class="filters" id="filters" role="tablist" aria-label="Filter works by collection">
       <button class="active" data-f="all">All</button>
@@ -176,7 +179,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
     <div>
       <h2 style="margin-bottom:26px">About Marie</h2>
       <p>Marie Plevy is a California painter whose work braids Jewish tradition with the candor and wit of pop art. Trained at UC Santa Barbara, she paints in acrylic on canvas and wood from her studio in Santa Cruz.</p>
-      <p>In her Judaica, the Torah is living material: a scroll unrolls and the Red Sea parts inside it; the Shekhinah burns above a menorah in letters of flame; Tutankhamun stares down a wall of Hebrew repeating, with a survivor's wry patience, <em>we outlasted Pharaoh — we will outlast this too.</em> Around these gather her California streets and coastlines, portraits in affectionate homage to Botero, and abstractions built from single Hebrew letters, monumental even at eleven inches.</p>
+      <p>In her Judaica, the Torah is living material: a scroll unrolls and the Red Sea parts inside it; the Shekhinah burns above a menorah in letters of flame; Tutankhamun stares down a wall of Hebrew repeating, with a survivor's wry patience: <em>we outlasted Pharaoh, we will outlast this too.</em> Around these gather her California streets and coastlines, portraits in affectionate homage to Botero, and abstractions built from single Hebrew letters, monumental even at eleven inches.</p>
       <p>The through-line is reverence without solemnity: paintings that take their inheritance seriously enough to play with it.</p>
     </div>
     <aside class="about-side">
@@ -187,7 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
       <div class="about-card">
         <span class="stamp">PAEPIR</span>
         <h3>The PAEPIR mark</h3>
-        <p>Every original is hand-stamped <strong>PAEPIR</strong> — signature, studio imprint, and certificate of authenticity in one.</p>
+        <p>Every original is hand-stamped <strong>PAEPIR</strong>: signature, studio imprint, and certificate of authenticity in one.</p>
         <p>New work and process: <a href="https://instagram.com/paepir" target="_blank" rel="noopener">@paepir</a> on Instagram.</p>
       </div>
     </aside>
@@ -197,7 +200,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 <section class="inquire" id="inquire">
   <div class="wrap">
     <h2>Acquire a painting</h2>
-    <p>Originals are available directly from the studio. For pricing, framing, commissions, or a viewing in Santa Cruz, write —</p>
+    <p>Originals are available directly from the studio. For pricing, framing, commissions, or a viewing in Santa Cruz, write:</p>
     <a class="big-mail" href="mailto:studio@paepir.com?subject=Painting%20inquiry">studio@paepir.com</a>
     <div class="inq-meta">
       <a href="https://instagram.com/paepir" target="_blank" rel="noopener">Instagram @paepir</a>
@@ -234,16 +237,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 </div>
 
 <script>
-/* ====== ARTWORK DATA — edit titles, sizes, prices, add buy:"<stripe link>" to show a Purchase button ====== */
+/* ====== ARTWORK DATA: edit titles, sizes, prices, add buy:"<stripe link>" to show a Purchase button ====== */
 const WORKS = [
  {f:"img_1417", t:"The Crossing",                 cat:"judaica",  m:"Acrylic on canvas", size:"36 × 48 in", price:"$12,000"},
- {f:"img_1424", t:"Shekhinah",                    cat:"judaica",  m:"Acrylic on canvas · antique gilt frame", size:"19 × 36 in · 29.5 × 45.5 in framed", price:"$4,800"},
+ {f:"img_1424", t:"Shekhinah",                    cat:"judaica",  m:"Acrylic on canvas · antique gilt frame", size:"19 × 36 in · 29.5 × 45.5 in framed", price:"$18,000"},
  {f:"img_1416", t:"Shalom Breaks Through",        cat:"judaica",  m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1426", t:"Shacharit (after Botero)",     cat:"portraits",m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1428", t:"San Francisco, All at Once",   cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
- {f:"img_1421", t:"We Outlasted Pharaoh",         cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
+ {f:"img_1421", t:"We Outlasted Pharaoh",         cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$10,200"},
  {f:"img_1412", t:"Open All Night",               cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
- {f:"img_1425", t:"Jerusalem of Gold",            cat:"judaica",  m:"Acrylic on canvas", size:"16 × 20 in", price:"$1,400"},
+ {f:"img_1425", t:"Jerusalem of Gold",            cat:"judaica",  m:"Acrylic on canvas", size:"16 × 20 in", price:"$2,000"},
  {f:"img_1422", t:"Ilomantis Ginsburgae (after Botero)", cat:"portraits",m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1415", t:"Carrying the Covenant",        cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1436", t:"Manhattanhenge",               cat:"scenes",   m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
@@ -253,23 +256,23 @@ const WORKS = [
  {f:"img_1434", t:"California Henge",             cat:"scenes",   m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1420", t:"Magen / San Francisco",        cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1435", t:"The Ark, Waiting",             cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
- {f:"img_1414", t:"Where We're Going, We Don't Need Roads", cat:"judaica", m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
- {f:"img_1410", t:"In the Beginning (Tondo)",     cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$5,800", round:true},
- {f:"img_1409", t:"Kaleidoscope Magen (Tondo)",   cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$5,800", round:true},
+ {f:"img_1414", t:"Where We're Going, We Don't Need Roads", cat:"judaica", m:"Acrylic on canvas", size:"30 × 40 in", price:"$8,800"},
+ {f:"img_1410", t:"In the Beginning (Tondo)",     cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$7,500", round:true},
+ {f:"img_1409", t:"Kaleidoscope Magen (Tondo)",   cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$7,500", round:true},
  {f:"img_1443", t:"Merkaba Window",               cat:"judaica",  m:"Acrylic on canvas", size:"17.5 × 55.5 in · 25 × 58 in framed", price:"$4,800", fit:"wide"},
- {f:"img_1427", t:"Lineage",                      cat:"judaica",  m:"Mixed media on wood", size:"11 × 47 in · 18 × 54 in framed", price:"$3,600", fit:"tall"},
+ {f:"img_1427", t:"Lineage",                      cat:"judaica",  m:"Mixed media on wood", size:"11 × 47 in · 18 × 54 in framed", price:"$6,000", fit:"tall"},
  {f:"img_1406", t:"This Is Your Sign",            cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1442", t:"Underground (Tokyo)",          cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1431", t:"Front Steps, San Francisco",   cat:"scenes",   m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
- {f:"img_1411", t:"Golden Hour, Natural Bridges", cat:"scenes",   m:"Acrylic on board", size:"23 × 71 in · 32 × 80 in framed", price:"$11,500", fit:"wide"},
- {f:"img_1438", t:"The Garden Glitch",            cat:"scenes",   m:"Acrylic on canvas", size:"24 × 48 in · 31 × 56 in framed", price:"$5,400"},
+ {f:"img_1411", t:"Golden Hour, Natural Bridges", cat:"scenes",   m:"Acrylic on board", size:"23 × 71 in · 32 × 80 in framed", price:"$17,000", fit:"wide"},
+ {f:"img_1438", t:"The Garden Glitch",            cat:"scenes",   m:"Acrylic on canvas", size:"24 × 48 in · 31 × 56 in framed", price:"$8,000"},
  {f:"img_1429", t:"Emergence",                    cat:"scenes",   m:"Acrylic on canvas", size:"16 × 20 in", price:"$1,400"},
  {f:"img_1430", t:"Rimon",                        cat:"judaica",  m:"Acrylic on canvas", size:"8 × 10 in", price:"$600"},
- {f:"img_1441", t:"Relief (Texture Study)",       cat:"letters",  m:"Acrylic & texture medium on canvas", size:"11 × 14 in", price:"$850"},
- {f:"img_1437", t:"Letter Study I (Gold)",        cat:"letters",  m:"Acrylic on canvas", size:"16 × 20 in", price:"$1,400"},
- {f:"img_1439", t:"Letter Study II (Teal)",       cat:"letters",  m:"Acrylic on canvas", size:"8 × 10 in", price:"$600"},
- {f:"img_1413", t:"Letter Study III",             cat:"letters",  m:"Acrylic on canvas", size:"11 × 14 in", price:"$850"},
- {f:"img_1407", t:"Letter Study IV",              cat:"letters",  m:"Acrylic on canvas", size:"11 × 14 in", price:"$850"},
+ {f:"img_1441", t:"Relief (Texture Study)",       cat:"letters",  m:"Acrylic & texture medium on canvas", size:"11 × 14 in", price:"$650"},
+ {f:"img_1437", t:"Letter Study I (Gold)",        cat:"letters",  m:"Acrylic on canvas", size:"16 × 20 in", price:"$950"},
+ {f:"img_1439", t:"Letter Study II (Teal)",       cat:"letters",  m:"Acrylic on canvas", size:"8 × 10 in", price:"$450"},
+ {f:"img_1413", t:"Letter Study III",             cat:"letters",  m:"Acrylic on canvas", size:"11 × 14 in", price:"$650"},
+ {f:"img_1407", t:"Letter Study IV",              cat:"letters",  m:"Acrylic on canvas", size:"11 × 14 in", price:"$650"},
 ];
 
 const grid = document.getElementById('grid');
@@ -277,7 +280,7 @@ WORKS.forEach((w,i)=>{
   const fig = document.createElement('button');
   fig.className = 'work'; fig.dataset.cat = w.cat; fig.dataset.i = i;
   fig.setAttribute('aria-label', `View ${w.t}`);
-  fig.innerHTML = `<span class="frame${w.round?' round':''}${w.fit?' '+w.fit:''}"><img loading="lazy" src="img/${w.f}.jpg" alt="${w.t} — ${w.m} by Marie Plevy"></span>
+  fig.innerHTML = `<span class="frame${w.round?' round':''}${w.fit?' '+w.fit:''}"><img loading="lazy" src="img/${w.f}.jpg" alt="${w.t}, ${w.m}, by Marie Plevy"></span>
     <figcaption><span class="t">${w.t}</span><span class="m">${w.price||""}</span></figcaption>`;
   fig.addEventListener('click', ()=>openLb(i));
   grid.appendChild(fig);
