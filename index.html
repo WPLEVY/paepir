@@ -73,7 +73,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,54px);l
 .work .frame.tall,.work .frame.wide{display:flex;align-items:center;justify-content:center;background:#F2EFE6}
 .work .frame.tall{aspect-ratio:3/4}
 .work .frame.wide{aspect-ratio:5/2}
-.work .frame.fit-1443{aspect-ratio:1900/654}
+.work .frame.fit-1443{aspect-ratio:1900/799}
 .work .frame.fit-1427{aspect-ratio:500/1525}
 .work .frame.tall img,.work .frame.wide img{width:auto;max-width:100%;max-height:100%}
 .work img{width:100%;transition:transform .5s ease}
@@ -171,7 +171,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
       <button data-f="scenes">Scenes &amp; Stories</button>
       <button data-f="portraits">Portraits</button>
       <button data-f="letters">Letterform Abstracts</button>
-      <button data-f="studies">Studies &amp; Small Works</button>
+      <button data-f="baby">For Baby's Eyes</button>
+      <button data-f="personal">Personal</button>
     </div>
     <div class="grid" id="grid"></div>
   </div>
@@ -278,19 +279,19 @@ const WORKS = [
  {f:"img_1407", t:"Letter Study IV",              cat:"letters",  m:"Acrylic on canvas", size:"11 × 14 in", price:"$200"},
 
  /* ---- new small studies & pieces ---- */
- {f:"img_1590", t:"Moon & Three Stars",            cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
- {f:"img_1589", t:"Pear",                          cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
- {f:"img_1588", t:"Apple",                         cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
- {f:"img_1587", t:"Eclipse",                       cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$160"},
- {f:"img_1586", t:"Grapes",                        cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
- {f:"img_1585", t:"Smiling Butterfly",             cat:"studies", m:"Acrylic on canvas", size:"10 × 8 in", price:"$120"},
- {f:"img_1584", t:"Toadstool",                     cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
- {f:"img_1583", t:"Ladybug",                       cat:"studies", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
- {f:"img_1582", t:"Halo (with Barn Owl)",          cat:"portraits", m:"Acrylic on canvas · gilt frame", size:"18 × 24 in", avail:"Not for sale"},
- {f:"img_1581", t:"The Admiral's Companion",       cat:"portraits", m:"Acrylic on canvas · gilt frame", size:"18 × 24 in", avail:"Not for sale"},
- {f:"img_1580", t:"Ketubah, Marie & William",      cat:"judaica", m:"Acrylic on wood panel", size:"28 in diameter", avail:"Not for sale", round:true},
- {f:"img_1579", t:"Strawberry Rattle",             cat:"studies", m:"Acrylic on wood panel · carved oval frame", size:"14 × 16 in", avail:"Not for sale", round:true},
- {f:"img_1578", t:"Bashful Bear Rattle",           cat:"studies", m:"Acrylic on wood panel · gilt oval frame", size:"14 × 16 in", avail:"Not for sale", round:true},
+ {f:"img_1590", t:"Moon & Three Stars",            cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
+ {f:"img_1589", t:"Pear",                          cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
+ {f:"img_1588", t:"Apple",                         cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
+ {f:"img_1587", t:"Eclipse",                       cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$160"},
+ {f:"img_1586", t:"Grapes",                        cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
+ {f:"img_1585", t:"Smiling Butterfly",             cat:"baby", m:"Acrylic on canvas", size:"10 × 8 in", price:"$120"},
+ {f:"img_1584", t:"Toadstool",                     cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
+ {f:"img_1583", t:"Ladybug",                       cat:"baby", m:"Acrylic on canvas", size:"8 × 10 in", price:"$120"},
+ {f:"img_1582", t:"Halo (with Barn Owl)",          cat:"personal", m:"Acrylic on canvas · gilt frame", size:"18 × 24 in", avail:"Not for sale"},
+ {f:"img_1581", t:"The Admiral's Companion",       cat:"personal", m:"Acrylic on canvas · gilt frame", size:"18 × 24 in", avail:"Not for sale"},
+ {f:"img_1580", t:"Ketubah, Marie & William",      cat:"personal", m:"Acrylic on wood panel", size:"28 in diameter", avail:"Not for sale", round:true},
+ {f:"img_1579", t:"Strawberry Rattle",             cat:"personal", m:"Acrylic on wood panel · carved oval frame", size:"14 × 16 in", avail:"Not for sale", round:true},
+ {f:"img_1578", t:"Bashful Bear Rattle",           cat:"personal", m:"Acrylic on wood panel · gilt oval frame", size:"14 × 16 in", avail:"Not for sale", round:true},
 ];
 
 const grid = document.getElementById('grid');
