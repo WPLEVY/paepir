@@ -371,7 +371,6 @@ function render(){
   document.getElementById('lbInq').href=`mailto:studio@paepir.com?subject=${encodeURIComponent('Inquiry: '+w.t)}`;
   document.getElementById('lbInq').style.display=(w.avail==='Sold'||w.avail==='Not for sale')?'none':'inline-block';
   const bb=document.getElementById('lbBuy');
-  const bb=document.getElementById('lbBuy');
   if(w.buy){bb.style.display='inline-block';bb.href=w.buy;}else{bb.style.display='none';}
 }
 function step(d){ const pos=visible.indexOf(cur); cur=visible[(pos+d+visible.length)%visible.length]; render(); }
