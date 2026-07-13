@@ -279,16 +279,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 <script>
 /* ====== ARTWORK DATA: edit titles, sizes, prices, add buy:"<stripe link>" to show a Purchase button ====== */
 const WORKS = [
- {f:"img_1417", t:"The Crossing",                 cat:"judaica",  m:"Acrylic on canvas", size:"36 × 48 in", price:"$12,000"},
+ {f:"img_1417", t:"The Crossing",                 cat:"judaica",  m:"Acrylic on canvas", size:"36 × 48 in", price:"$12,000", avail:"Sold"},
  {f:"img_1424", t:"Shekhinah",                    cat:"judaica",  m:"Acrylic on canvas · antique gilt frame", size:"19 × 36 in · 29.5 × 45.5 in framed", price:"$18,000"},
  {f:"img_1416", t:"Shalom Breaks Through",        cat:"judaica",  m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1426", t:"Shacharit (after Botero)",     cat:"portraits",m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
- {f:"img_1428", t:"San Francisco, All at Once",   cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
+ {f:"img_1428", t:"San Francisco, All at Once",   cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800", avail:"Sold"},
  {f:"img_1421", t:"We Outlasted Pharaoh",         cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$10,200"},
  {f:"img_1412", t:"Open All Night",               cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1425", t:"Jerusalem of Gold",            cat:"judaica",  m:"Acrylic on canvas", size:"16 × 20 in", price:"$2,000"},
  {f:"img_1422", t:"Ilomantis Ginsburgae (after Botero)", cat:"portraits",m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
- {f:"img_1415", t:"Carrying the Covenant",        cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800", avail:"Not for sale"},
+ {f:"img_1415", t:"Carrying the Covenant",        cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800", avail:"Sold"},
  {f:"img_1436", t:"Manhattanhenge",               cat:"scenes",   m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1419", t:"Hamsa Nebula",                 cat:"judaica",  m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1433", t:"Einstein, Practicing (after Botero)", cat:"portraits", m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
@@ -297,14 +297,14 @@ const WORKS = [
  {f:"img_1420", t:"Magen / San Francisco",        cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1435", t:"The Ark, Waiting",             cat:"judaica",  m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
  {f:"img_1414", t:"Where We're Going, We Don't Need Roads", cat:"judaica", m:"Acrylic on canvas", size:"30 × 40 in", price:"$8,800"},
- {f:"img_1410", t:"In the Beginning (Tondo)",     cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$10,500", round:true},
+ {f:"img_1410", t:"In the Beginning (Tondo)",     cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$10,500", round:true, avail:"Sold"},
  {f:"img_1409", t:"Kaleidoscope Magen (Tondo)",   cat:"judaica",  m:"Acrylic on round canvas", size:"36 in diameter", price:"$7,500", round:true},
  {f:"img_1443", t:"Merkaba Window",               cat:"judaica",  m:"Acrylic on canvas", size:"17.5 × 55.5 in · 25 × 58 in framed", price:"$7,200", fit:"wide fit-1443"},
  {f:"img_1427", t:"Lineage",                      cat:"judaica",  m:"Mixed media on wood", size:"11 × 47 in · 18 × 54 in framed", price:"$13,600", avail:"Not for sale", fit:"tall"},
  {f:"img_1406", t:"This Is Your Sign",            cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800", avail:"Not for sale"},
  {f:"img_1442", t:"Underground (Tokyo)",          cat:"scenes",   m:"Acrylic on canvas", size:"36 × 48 in", price:"$9,800"},
  {f:"img_1431", t:"Front Steps, San Francisco",   cat:"scenes",   m:"Acrylic on canvas", size:"30 × 40 in", price:"$6,800"},
- {f:"img_1411", t:"Golden Hour, Natural Bridges", cat:"scenes",   m:"Acrylic on board", size:"23 × 71 in · 32 × 80 in framed", price:"$17,000", fit:"wide"},
+ {f:"img_1411", t:"Golden Hour, Natural Bridges", cat:"scenes",   m:"Acrylic on board", size:"23 × 71 in · 32 × 80 in framed", price:"$17,000", fit:"wide", avail:"Sold"},
  {f:"img_1438", t:"The Garden Glitch",            cat:"scenes",   m:"Acrylic on canvas", size:"24 × 48 in · 31 × 56 in framed", price:"$8,000"},
  {f:"img_1429", t:"Emergence",                    cat:"scenes",   m:"Acrylic on canvas", size:"16 × 20 in", price:"$1,400"},
  {f:"img_1430", t:"Rimon",                        cat:"judaica",  m:"Acrylic on canvas", size:"8 × 10 in", price:"$600"},
@@ -334,7 +334,7 @@ const WORKS = [
  {f:"img_2105", t:"Big Sur, All at Once",          cat:"nocturne", m:"Acrylic on canvas", size:"30 × 40 in", price:"$9,200"},
  {f:"img_2102", t:"Diner, After Midnight",         cat:"nocturne", m:"Acrylic on canvas", size:"30 × 40 in", price:"$7,500"},
  {f:"img_2101", t:"Vacancy",                       cat:"nocturne", m:"Acrylic on canvas", size:"30 × 40 in", price:"$7,500"},
- {f:"img_2103", t:"Threshold (Tondo)",             cat:"nocturne", m:"Acrylic on round canvas", size:"36 in diameter", price:"$10,500", round:true},
+ {f:"img_2103", t:"Threshold (Tondo)",             cat:"nocturne", m:"Acrylic on round canvas", size:"36 in diameter", price:"$10,500", round:true, avail:"Sold"},
 ];
 
 const grid = document.getElementById('grid');
@@ -342,8 +342,11 @@ WORKS.forEach((w,i)=>{
   const fig = document.createElement('button');
   fig.className = 'work'; fig.dataset.cat = w.cat; fig.dataset.i = i;
   fig.setAttribute('aria-label', `View ${w.t}`);
-  const badge = w.avail==='Sold' ? 'Sold' : w.avail==='Not for sale' ? 'Not for sale' : '';
-  const priceDisplay = badge ? `<span class="m status-${w.avail==='Sold'?'sold':'nfs'}">${badge}</span>` : `<span class="m">${w.price||''}</span>`;
+  const priceDisplay = w.avail==='Sold'
+    ? `<span class="m">${w.price||''} <span class="status-sold">Sold</span></span>`
+    : w.avail==='Not for sale'
+      ? `<span class="m status-nfs">Not for sale</span>`
+      : `<span class="m">${w.price||''}</span>`;
   fig.innerHTML = `<span class="frame${w.round?' round':''}${w.fit?' '+w.fit:''}"><img loading="lazy" src="img/${w.f}.jpg" alt="${w.t}, ${w.m}, by Marie Plevy"></span>
     <figcaption><span class="t">${w.t}</span>${priceDisplay}</figcaption>`;
   fig.addEventListener('click', ()=>openLb(i));
